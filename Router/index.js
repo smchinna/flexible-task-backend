@@ -11,6 +11,10 @@ router.use(bodyParser({ limit: '50mb' }));
 
 router.use(bodyParser.urlencoded({ extended: true, parameterLimit: 500000 }));
 
+router.post('/hello', (req, res) => {
+  res.send("Hello it's working")
+})
+
 router.post('/register', (req, res) => {
   singUpController.singUpFunc(req, res)
 })
